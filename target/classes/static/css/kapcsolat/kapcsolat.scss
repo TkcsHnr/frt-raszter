@@ -10,9 +10,6 @@
 
 .map {
     position: relative;
-    img.base {
-        filter: grayscale(1);
-    }
     img.pulse {
         animation:  Pulsate 3s ease-in-out infinite;
         position: absolute;
@@ -22,9 +19,9 @@
 }
 
 @keyframes Pulsate {
-    from { opacity: .5; }
+    from { opacity: 1; }
     50% { opacity: 0; }
-    to { opacity: .5; }
+    to { opacity: 1; }
 }
 
 @media only screen and (max-width: 1024px) {

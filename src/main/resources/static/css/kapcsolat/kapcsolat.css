@@ -13,11 +13,6 @@
   position: relative;
 }
 
-.map img.base {
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
-}
-
 .map img.pulse {
   -webkit-animation: Pulsate 3s ease-in-out infinite;
           animation: Pulsate 3s ease-in-out infinite;
@@ -27,25 +22,25 @@
 
 @-webkit-keyframes Pulsate {
   from {
-    opacity: .5;
+    opacity: 1;
   }
   50% {
     opacity: 0;
   }
   to {
-    opacity: .5;
+    opacity: 1;
   }
 }
 
 @keyframes Pulsate {
   from {
-    opacity: .5;
+    opacity: 1;
   }
   50% {
     opacity: 0;
   }
   to {
-    opacity: .5;
+    opacity: 1;
   }
 }
 

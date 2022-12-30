@@ -1,0 +1,109 @@
+h1.title {
+  text-transform: uppercase;
+  font-size: 3.2rem;
+  font-weight: 400;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  width: 100%;
+  display: none;
+}
+
+div.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: var(--nav_width);
+  padding: 0 var(--inner_padding);
+  gap: var(--gap);
+}
+
+div.row .map {
+  width: 75%;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+div.row .map img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+div.row .info {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: var(--gap);
+}
+
+div.row .info p, div.row .info a {
+  font-size: 1.6rem;
+  color: var(--font_color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+div.row .info p span, div.row .info a span {
+  color: var(--accent_color);
+}
+
+div.row .info a {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+div.row .info p.list a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div.row .info p.list a:not(:last-child) {
+  margin-right: 0.8rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  div.row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+  }
+  div.row .title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  div.row .map, div.row .info {
+    width: 100%;
+  }
+  div.row .info {
+    padding: 0 var(--inner_padding);
+    gap: 1rem;
+  }
+}
+/*# sourceMappingURL=contact.css.map */

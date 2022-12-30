@@ -1,0 +1,22 @@
+.banner {
+    height: calc(400px + var(--nav_height));
+
+    .bannermap {
+        width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+    }
+}
+
+.map {
+    filter: grayscale(1);
+}
+
+@media only screen and (max-width: 1024px) {
+    .map {
+        display: none !important;
+    }
+    .banner {
+        height: calc(320px + var(--nav_height)) !important;
+    }
+}

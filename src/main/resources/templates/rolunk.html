@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Rólunk | FRT</title>
+
+    <th:block th:include="fragments/general.html :: headerFiles"></th:block>
+    <link th:href="@{/css/rolunk/rolunk.css}" href="#" rel="stylesheet">
+</head>
+
+<body>
+    <div th:replace="fragments/general :: loader"></div>
+    <nav th:replace="fragments/general :: nav"></nav>
+
+    <div class="banner"></div>
+    <main>
+        <div class="row">
+            <div class="card">
+                <div class="banneraccent">
+                    <div class="pic balazs"></div>
+                </div>
+                <h1 class="name">Takács Balázs</h1>
+                <div class="title">ügyvezető igazgató</div>
+                <div class="desc">
+                    <ul>
+                        <li>okleveles építészmérnök</li>
+                        <li>okleveles szigetelő szakmérnök</li>
+                    </ul>
+                    <div>
+                        <p><span>Születési hely: </span>Pápa</p>
+                        <p><span>Születési idő: </span>1972</p>
+                    </div>
+                    <div>
+                        <p><span>Tanulmányok:</span></p>
+                        <ul class="education">
+                            <li>Hild József Építőipari Szakközépiskola, Győr 1987-1991</li>
+                            <li>BME Építészmérnöki Kar, építészmérnöki képzés 1991-1996</li>
+                            <li>BME Építészmérnöki Kar, szigetelő szakmérnök képzés 2000-2002</li>
+                        </ul>
+                    </div>
+                    <div class="rizsa">
+                        <p><span>Rólam:</span></p>
+                        <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, omnis, nisi
+                            inventore non blanditiis obcaecati magnam, delectus nulla adipisci aut nesciunt fuga praesentium
+                            sint? Et ipsum eum ea. Repellat, optio! Consequuntur minima quae ea. Dolorem corporis
+                            reprehenderit delectus sint commodi quo amet numquam, unde nemo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="banneraccent">
+                    <div class="pic ricsi"></div>
+                </div>
+                <h1 class="name">Reisch Richárd</h1>
+                <div class="title">ügyvezető igazgató</div>
+                <div class="desc">
+                    <ul>
+                        <li>okleveles építészmérnök</li>
+                        <li>okleveles szigetelő szakmérnök</li>
+                    </ul>
+                    <div>
+                        <p><span>Születési hely: </span>Budapest</p>
+                        <p><span>Születési idő: </span>1972</p>
+                    </div>
+                    <div>
+                        <p><span>Tanulmányok:</span></p>
+                        <ul class="education">
+                            <li>József Attila Gimnázium 1988-1991</li>
+                            <li>BME Építészmérnöki Kar, építészmérnöki képzés 1991-1997</li>
+                            <li>BME Építészmérnöki Kar, PhD doktori iskola 1997-2000</li>
+                            <li>BME Építészmérnöki Kar, szigetelő szakmérnök képzés 2000-2002</li>
+                        </ul>
+                    </div>
+                    <div class="rizsa">
+                        <p><span>Rólam:</span></p>
+                        <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus aspernatur a magnam
+                            deleniti iste doloribus labore quae nam dolores possimus, sint enim reprehenderit, reiciendis,
+                            aliquid quo quos sequi? Sapiente quae mollitia, perferendis repellat tenetur quasi error
+                            suscipit accusantium quod voluptatibus?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer th:replace="fragments/general :: footer"></footer>
+    <th:block th:include="fragments/general :: scripts"></th:block>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Főoldal | FRT</title>
+
+    <th:block th:include="fragments/general :: headerFiles"></th:block>
+
+    <link th:href="@{/css/home/home.css}" href="#" rel="stylesheet">
+    <link th:href="@{/css/fragments/contact/contact.css}" href="#" rel="stylesheet">
+</head>
+
+<body>
+    <div th:replace="fragments/general :: loader"></div>
+    <nav th:replace="fragments/general :: nav"></nav>
+
+    <div class="banner"></div>
+    <main>
+        <div class="row">
+            <div class="map">
+                    <!-- ideiglenes kép helyette -->
+                <!-- <iframe src="https://snazzymaps.com/embed/380703" width="100%" height="420px" style="border:none;"></iframe> -->
+                <img src="" th:src="@{/images/temporary-map.png}" alt="Ideiglenes map">
+            </div>
+    
+            <div class="info">
+                <h1 class="title">Elérhetőségek</h1>
+                <p><span>Cégnév:&nbsp;</span> FRT Raszter Építésziroda Kft.</p>
+                <p><span>Iroda:&nbsp;</span> Budapest, Visegrádi u. 3, 1132</p>
+                <p class="list">
+                    <span>Telefon:&nbsp;</span>
+                    <a href="tel:+3614662783">+36 1 466 2783</a>
+                    <a href="tel:+3612790875">+36 1 279 0875</a>
+                </p>
+                <p><span>Email:&nbsp;</span><a href="mailto:frt@frt-raszter.hu">frt@frt-raszter.hu</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer th:replace="fragments/general :: footer"></footer>
+
+    <th:block th:include="fragments/general :: scripts"></th:block>
+</body>
+
+</html>

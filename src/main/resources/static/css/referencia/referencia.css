@@ -1,0 +1,119 @@
+div.banner {
+  background-image: url("https://picsum.photos/1200/900");
+}
+
+main {
+  padding-left: var(--inner_padding);
+  padding-right: var(--inner_padding);
+}
+
+h1.title {
+  text-transform: uppercase;
+  font-size: 4rem;
+  line-height: 4.5rem;
+  font-weight: 400;
+  padding-bottom: var(--gap_bigger);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+div.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: var(--nav_width);
+  gap: var(--gap);
+}
+
+div.row .gallery {
+  width: 75%;
+  padding-top: var(--gap);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 3px solid var(--font_color);
+}
+
+div.row .gallery img {
+  width: 100%;
+}
+
+div.row .info {
+  width: 25%;
+  padding-top: var(--gap);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: var(--gap);
+  border-top: 3px solid var(--font_color);
+}
+
+div.row .info p {
+  font-size: 1.6rem;
+  color: var(--accent_color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+div.row .info p span {
+  color: var(--font_color);
+}
+
+div.row .info p span.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+div.row .info p span.list > span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div.row .info p span.list span:not(:last-child)::after {
+  content: ", ";
+  display: block;
+  margin-right: 0.8rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  div.row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  div.row .gallery {
+    padding: 0;
+    width: 100%;
+    border: none;
+  }
+  div.row .info {
+    width: 100%;
+    gap: 1rem;
+  }
+}
+/*# sourceMappingURL=referencia.css.map */

@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="headerFiles">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="#" th:href="@{/images/icon.png}">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link th:href="@{/css/fragments/variables.css}" rel="stylesheet">
+    <link th:href="@{/css/document/document.css}" rel="stylesheet">
+    <link th:href="@{/css/fragments/loader.css}" rel="stylesheet">
+    <link th:href="@{/css/menu/menu.css}" rel="stylesheet">
+    <link th:href="@{/css/footer/footer.css}" rel="stylesheet">
+    <link th:href="@{/css/fragments/banner.css}" href="#" rel="stylesheet">
+</head>
+
+<body>
+    <div th:fragment="loader" class="loader-wrapper">
+        <div class="loader">
+            <span></span>
+        </div>
+    </div>
+
+    <div id="navbox" class="navs" th:fragment="nav">
+        <nav id="nav" class="navs">
+            <a th:href="@{/}" href="#" class="logo"><img th:src="@{/images/logo.png}"></a>
+    
+            <ul id="linklist" class="init">
+                <li th:classappend="${#httpServletRequest.getRequestURI() == '/' ? 'active':''}">
+                    <a th:href="@{/}" href="#">Főoldal</a>
+                </li>
+                <li th:classappend="${#httpServletRequest.getRequestURI().startsWith('/szolgaltatasok') ? 'active':''}">
+                    <a th:href="@{/szolgaltatasok}" href="#">Szolgáltatások</a>
+                </li>
+                <li th:classappend="${#httpServletRequest.getRequestURI().startsWith('/referencia') ? 'active':''}">
+                    <a th:href="@{/referenciak}" href="#">Referenciák</a>
+                </li>
+                <li th:classappend="${#httpServletRequest.getRequestURI().startsWith('/rolunk') ? 'active':''}">
+                    <a th:href="@{/rolunk}" href="#">Rólunk</a>
+                </li>
+                <li th:classappend="${#httpServletRequest.getRequestURI().startsWith('/kapcsolat') ? 'active':''}">
+                    <a th:href="@{/kapcsolat}" href="#">Kapcsolat</a>
+                </li>
+            </ul>
+            <input type="checkbox" id="check">
+            <label for="check" id="menubtn" class="menubtn">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-close"></i>
+            </label>
+        </nav>
+    </div>
+
+    <footer th:fragment="footer">
+        <p class="item">
+            <i class="fa fa-copyright"></i>
+            <span>&nbsp; 2022 FRT Raszter Kft. Minden jog fenntartva.</span>
+        </p>
+        <p class="item">
+            <a href="mailto:frt@frt-raszter.hu">frt@frt-raszter.hu</a>
+        </p>
+        <p class="item">
+            <a href="tel:+3614662783">+36 1 466 2783</a> 
+            <span>&nbsp; | &nbsp;</span> 
+            <a href="tel:+3612790875">+36 1 279 0875</a>
+        </p>
+    </footer>
+
+    <th:block th:fragment="scripts">
+        <script th:src="@{/js/loader.js}" type="text/javascript"></script>
+        <script th:src="@{/js/menu.js}" type="text/javascript"></script>
+        <script th:src="@{/js/banner.js}" type="text/javascript"></script>
+    </th:block>
+</body>
+
+</html>

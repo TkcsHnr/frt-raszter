@@ -1,0 +1,12 @@
+:root {
+    --nav_width: 1200px;
+    --inner_padding: 4rem;
+    --nav_height: 11rem;
+    --gap: 2rem;
+    --gap_bigger: 3rem;
+    --gap_bottom: 6rem;
+
+    --bg_color: #f1f1f1;
+    --font_color: #16151b;
+    --accent_color: #8b171a;
+}

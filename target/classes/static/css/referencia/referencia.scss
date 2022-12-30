@@ -1,0 +1,82 @@
+div.banner {
+    background-image: url("https://picsum.photos/1200/900");
+}
+main {
+    padding-left: var(--inner_padding);
+    padding-right: var(--inner_padding);
+}
+h1.title {
+    text-transform: uppercase;
+    font-size: 4rem;
+    line-height: 4.5rem;
+    font-weight: 400;
+    padding-bottom: var(--gap_bigger);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+div.row {
+    display: flex;
+    width: var(--nav_width);
+    gap: var(--gap);
+
+    .gallery {
+        width: 75%;
+        padding-top: var(--gap);
+        display: flex;
+        border-top: 3px solid var(--font_color);
+
+        img {
+            width: 100%;
+        }
+    }
+    .info {
+        width: 25%;      
+        padding-top: var(--gap);
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+
+        border-top: 3px solid var(--font_color);
+        p {
+            font-size: 1.6rem;
+            color: var(--accent_color);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+    
+            span {
+                color: var(--font_color);
+            }
+            span.list {
+                display: flex;
+                flex-direction: row;
+                & > span {
+                    display: flex;
+                }
+                span:not(:last-child)::after {
+                    content: ", ";
+                    display: block;
+                    margin-right: 0.8rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    div.row {
+        flex-direction: column-reverse;
+
+        .gallery {
+            padding: 0;
+            width: 100%;
+            border: none;
+        }
+        .info {
+            width: 100%;
+            gap: 1rem;
+        }
+    }
+}

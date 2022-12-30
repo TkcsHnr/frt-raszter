@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Szolgáltatások | FRT</title>
+
+    <th:block th:include="fragments/general.html :: headerFiles"></th:block>
+</head>
+
+<body>
+    <div th:replace="fragments/general :: loader"></div>
+
+    <nav th:replace="fragments/general :: nav"></nav>
+
+    <footer th:replace="fragments/general :: footer"></footer>
+
+
+    <th:block th:include="fragments/general :: scripts"></th:block>
+</body>
+
+</html>

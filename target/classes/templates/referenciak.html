@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Referenciák | FRT</title>
+
+    <th:block th:include="fragments/general.html :: headerFiles"></th:block>
+
+    <link th:href="@{css/referenciak/referenciak.css}" href="#" rel="stylesheet">
+</head>
+
+<body>
+    <div th:replace="fragments/general :: loader"></div>
+
+    <nav th:replace="fragments/general :: nav"></nav>
+
+    <div class="banner"></div>
+    <main>
+        <section class="grid">
+            <a th:each="project : ${projects}" th:href="${'/referencia/' + project.name}" href="#" class="projectTile">
+                <img th:src="${'https://picsum.photos/400/300?random=' + project.id}" src="" class="picture">
+                <div class="description bg"></div>
+                <div class="description bg-hover"></div>
+                <p th:text="${project.displayName}" class="description txt">Referencia neve</p>
+                <p th:text="${project.displayName}" class="description txt txt-hover">Referencia neve</p>
+            </a>
+        </section>
+    </main>
+
+    <footer th:replace="fragments/general :: footer"></footer>
+
+    <th:block th:include="fragments/general :: scripts"></th:block>
+</body>
+
+</html>

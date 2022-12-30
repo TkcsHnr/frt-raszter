@@ -2,28 +2,25 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <title>Kapcsolat | FRT</title>
+    <title>Főoldal | FRT</title>
 
-    <th:block th:include="fragments/general.html :: headerFiles"></th:block>
+    <th:block th:include="fragments/general :: headerFiles"></th:block>
 
-    <link th:href="@{css/kapcsolat/kapcsolat.css}" href="#" rel="stylesheet">
-    <link th:href="@{css/fragments/contact/contact.css}" href="#" rel="stylesheet">
+    <link th:href="@{/css/home/home.css}" href="#" rel="stylesheet">
+    <link th:href="@{/css/fragments/contact/contact.css}" href="#" rel="stylesheet">
 </head>
 
 <body>
     <div th:replace="fragments/general :: loader"></div>
-
     <nav th:replace="fragments/general :: nav"></nav>
 
-    <div class="banner">
-        <iframe class="bannermap" src="https://snazzymaps.com/embed/380703" style="border:none;"></iframe>
-        <!-- <img class="bannermap" src="" th:src="@{/images/temporary-map.png}" alt="Ideiglenes map"> -->
-    </div>
+    <div class="banner"></div>
     <main>
         <div class="row">
             <div class="map">
-                <img src="../../images/office.png" alt="" class="base">
-                <img src="../../images/office_pulse.png" alt="" class="pulse">
+                    <!-- ideiglenes kép helyette -->
+                <!-- <iframe src="https://snazzymaps.com/embed/380703" width="100%" height="420px" style="border:none;"></iframe> -->
+                <img src="" th:src="@{/images/temporary-map.png}" alt="Ideiglenes map">
             </div>
     
             <div class="info">
@@ -37,7 +34,8 @@
                 </p>
                 <p><span>Email:&nbsp;</span><a href="mailto:frt@frt-raszter.hu">frt@frt-raszter.hu</a></p>
             </div>
-        </div>    </main>
+        </div>
+    </main>
 
     <footer th:replace="fragments/general :: footer"></footer>
 
